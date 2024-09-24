@@ -9,6 +9,7 @@ import openai
 from dotenv import load_dotenv
 import os
 import shutil
+import nltk
 
 # Load environment variables. Assumes that project contains .env file with API keys
 load_dotenv()
