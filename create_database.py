@@ -66,7 +66,7 @@ def save_to_chroma(chunks: list[Document]):
     # Create a new DB from the documents.
     db = Chroma.from_documents(
         #chunks, OpenAIEmbeddings(), persist_directory=CHROMA_PATH
-        chunks, GoogleGenerativeAIEmbeddings(model='textembedding-gecko@001'), persist_directory=CHROMA_PATH
+        chunks, GoogleGenerativeAIEmbeddings(model='gemini-1.5-flash'), persist_directory=CHROMA_PATH
     )
     db.persist()
     print(f"Saved {len(chunks)} chunks to {CHROMA_PATH}.")

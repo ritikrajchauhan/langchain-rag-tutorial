@@ -35,7 +35,7 @@ def main():
 
     # Prepare the DB.
     #embedding_function = OpenAIEmbeddings()
-    embedding_function = GoogleGenerativeAIEmbeddings(model='textembedding-gecko@001')
+    embedding_function = GoogleGenerativeAIEmbeddings(model='gemini-1.5-flash')
     db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
 
     # Search the DB.
